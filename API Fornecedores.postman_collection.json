@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "5a55a402-dbd7-46c1-9f46-80b905c2fef0",
+		"name": "API Fornecedores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inserir Fornecedor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"nome\" : \"Venco\",\n\t\"cep\" : \"07786850\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/fornecedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"fornecedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alteração de Fornecedor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"nome\": \"Venco\",\n\t\"cep\": \"07789375\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/fornecedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"fornecedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Fornecedor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/fornecedores/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"fornecedores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os Fornecedores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/fornecedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"fornecedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Fornecedor por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/fornecedores/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"fornecedores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

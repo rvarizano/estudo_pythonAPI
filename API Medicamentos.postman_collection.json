@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "489b0fa7-8a20-4976-89c0-0dfe7be46140",
+		"name": "API Medicamentos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inserir Medicamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"nome\" : \"Enrofloxacina 50 mg\",\n\t\"indicacao\" : \"Indicado para infecções causadas tais como pneumonia aguda, sub aguda e crônica.\",\n\t\"descricao\" : \"Antibiótico indicado para o tratamento de doenças infecciosas causadas por bactérias.\",\n\t\"formulacao\" : \"Enrofloxacina, 50mg / Excipiente q.s.p, 120mg\",\n\t\"apresentacao\" : \"Blister com 10 comprimidos de 120mg cada.\",\n\t\"modo_uso\" : \"Administrar via oral.\",\n\t\"posologia\" : \"Fornecer um comprimido para cada 10kg de peso (5mg de enropfloxacino por kg de peso) diariamente por 5 dias consecutivos.\",\n\t\"fornecedor\" : \"Venco\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir Medicamento - Exemplo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"nome\" : \"Exemplo\",\n\t\"indicacao\" : \"Exemplo\",\n\t\"descricao\" : \"Exemplo\",\n\t\"formulacao\" : \"Exemplo\",\n\t\"apresentacao\" : \"Exemplo\",\n\t\"modo_uso\" : \"Exemplo\",\n\t\"posologia\" : \"Exemplo\",\n\t\"fornecedor\" : \"Exemplo\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Medicamento",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"nome\" : \"Enrofloxacina 150 mg\",\n\t\"indicacao\" : \"Indicado para infecções causadas tais como pneumonia aguda, sub aguda e crônica.\",\n\t\"descricao\" : \"Antibiótico indicado para o tratamento de doenças infecciosas causadas por bactérias.\",\n\t\"formulacao\" : \"Enrofloxacina, 150mg / Excipiente q.s.p, 300mg\",\n\t\"apresentacao\" : \"Blister com 10 comprimidos de 120mg cada.\",\n\t\"modo_uso\" : \"Administrar via oral.\",\n\t\"posologia\" : \"a\",\n\t\"fornecedor\" : \"Venco\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Medicamento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os Medicamentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Localizar Medicamento por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Localizar Medicamento por Nome - Exemplo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/Exemplo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"Exemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Localizar Medicamento por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/Enrofloxacina 150 mg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"Enrofloxacina 150 mg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Localizar Medicamento por Fornecedor - Exemplo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/fornecedor/Exemplo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"fornecedor",
+						"Exemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Localizar Medicamento por Fornecedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/medicamentos/fornecedor/Venco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"medicamentos",
+						"fornecedor",
+						"Venco"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
